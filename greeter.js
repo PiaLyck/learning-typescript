@@ -1,7 +1,10 @@
-function greeter(person) {
-    return "Hello, " + person;
+function greeter(dog) {
+    return "Hello, " + dog.name + "\n" + "You are " + dog.age + " years old";
 }
-var user = "Jane Doe";
+var dog = {
+    name: "Fido", fur: "short", age: 3
+};
+/* Class */
 var PizzaMaker = /** @class */ (function () {
     function PizzaMaker() {
     }
@@ -14,4 +17,4 @@ var yummyPizza = PizzaMaker.makeIt({
     name: "Friedas Favourite",
     toppings: ["Meat", "Cheese"]
 });
-document.body.textContent = "" + (yummyPizza.name + "\n" + yummyPizza.toppings);
+document.body.textContent = greeter(dog);
