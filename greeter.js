@@ -1,10 +1,10 @@
-function greeter(dog) {
-    return "Hello, " + dog.name + "\n" + "You are " + dog.age + " years old";
+function greeter(cat) {
+    return "Hello, " + cat.fullName;
 }
 var dog = {
     name: "Fido", fur: "short", age: 3
 };
-/* Class */
+/* Class 1 - Pizza */
 var PizzaMaker = /** @class */ (function () {
     function PizzaMaker() {
     }
@@ -17,4 +17,15 @@ var yummyPizza = PizzaMaker.makeIt({
     name: "Friedas Favourite",
     toppings: ["Meat", "Cheese"]
 });
-document.body.textContent = greeter(dog);
+/* Class 2 - Cats */
+var Cat = /** @class */ (function () {
+    function Cat(firstName, lastName, honorific) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.honorific = honorific;
+        this.fullName = honorific + " " + firstName + " " + lastName;
+    }
+    return Cat;
+}());
+var cat = new Cat("Kitty", "Purr", "Miss");
+document.body.textContent = greeter(cat);
